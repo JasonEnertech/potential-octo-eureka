@@ -1,0 +1,219 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1107 523" font-family="Inter,'Segoe UI',Arial,sans-serif">
+  <rect width="1107" height="523" fill="#ffffff"/>
+
+  <!-- ============ HEADER ============ -->
+  <text x="36" y="38" font-size="19" font-weight="700" fill="#0a1628" letter-spacing="0.01em">SOLUTION 1 — PV + STORAGE, GRID-TIED</text>
+  <text x="36" y="58" font-size="12" fill="#5b708c">250 kW PV · 1.8 MWh BESS · AC-coupled · 480/277 V, 3&#966; · North America</text>
+  <text x="1071" y="38" font-size="10" fill="#8b98a8" text-anchor="end" letter-spacing="0.14em">SHEET 1 OF 2</text>
+  <line x1="36" y1="74" x2="1071" y2="74" stroke="#d8dee6" stroke-width="1.5"/>
+
+  <!-- ============ QUANTITY TABLE ============ -->
+  <text x="36" y="100" font-size="10.5" font-weight="700" fill="#0a1628" letter-spacing="0.08em">ONE TYPICAL SYSTEM — KEY QUANTITIES</text>
+  <g font-size="10">
+    <text x="36" y="120" font-size="12" font-weight="700" fill="#e8622c">2</text>
+    <text x="58" y="120" font-weight="700" fill="#0a1628">PCS</text>
+    <text x="140" y="120" fill="#5b708c">125 kW each · 480 V · grid-forming</text>
+    <text x="36" y="138" font-size="12" font-weight="700" fill="#e8622c">6</text>
+    <text x="58" y="138" font-weight="700" fill="#0a1628">Battery packs</text>
+    <text x="140" y="138" fill="#5b708c">LFP · 300 kWh each · 1.8 MWh total</text>
+    <text x="36" y="156" font-size="12" font-weight="700" fill="#e8622c">8</text>
+    <text x="58" y="156" font-weight="700" fill="#0a1628">PV inverters</text>
+    <text x="140" y="156" fill="#5b708c">string type · AC-coupled at 480 V bus</text>
+    <text x="36" y="174" font-size="12" font-weight="700" fill="#e8622c">1</text>
+    <text x="58" y="174" font-weight="700" fill="#0a1628">EMS controller</text>
+    <text x="140" y="174" fill="#5b708c">Modbus TCP · cloud remote O&amp;M</text>
+  </g>
+
+  <!-- ============ EMS CLOUD (top right) ============ -->
+  <g stroke="#0a1628" stroke-width="1.4" fill="#ffffff">
+    <rect x="930" y="100" width="64" height="42" rx="2"/>
+    <line x1="962" y1="142" x2="962" y2="150"/>
+    <line x1="948" y1="150" x2="976" y2="150"/>
+  </g>
+  <text x="942" y="112" font-size="7.5" fill="#5b708c" letter-spacing="0.1em">REMOTE</text>
+  <text x="942" y="126" font-size="7.5" fill="#5b708c" letter-spacing="0.1em">ACCESS</text>
+  <text x="1004" y="114" font-size="11" font-weight="700" fill="#0a1628">EMS CLOUD</text>
+  <text x="1004" y="128" font-size="9.5" fill="#5b708c">remote O&amp;M · VPN</text>
+
+  <!-- ============ 480/277 V BUS ============ -->
+  <text x="380" y="196" font-size="12" font-weight="700" fill="#0a1628" text-anchor="middle">480 / 277 V AC BUS</text>
+  <line x1="90" y1="206" x2="1020" y2="206" stroke="#0a1628" stroke-width="4"/>
+
+  <!-- ============ GRID (right) ============ -->
+  <rect x="1003" y="190" width="34" height="26" rx="3" fill="#e7f2e4" stroke="#6fa96f" stroke-width="1.2"/>
+  <text x="1020" y="207" font-size="10" font-weight="700" fill="#3f6b3f" text-anchor="middle">CT</text>
+  <line x1="1020" y1="216" x2="1020" y2="245" stroke="#1f5fa8" stroke-width="2.5"/>
+  <circle cx="1020" cy="258" r="13" fill="#ffffff" stroke="#0a1628" stroke-width="2"/>
+  <circle cx="1020" cy="280" r="13" fill="#ffffff" stroke="#0a1628" stroke-width="2"/>
+  <line x1="1020" y1="293" x2="1020" y2="338" stroke="#1f5fa8" stroke-width="2.5"/>
+  <g stroke="#5b708c" stroke-width="1.4" fill="none">
+    <path d="M1002 410 L1020 340 L1038 410"/>
+    <line x1="996" y1="354" x2="1044" y2="354"/>
+    <line x1="1004" y1="370" x2="1036" y2="370"/>
+    <line x1="1010" y1="386" x2="1030" y2="386"/>
+    <line x1="1020" y1="340" x2="1020" y2="410"/>
+    <line x1="996" y1="354" x2="996" y2="360"/>
+    <line x1="1044" y1="354" x2="1044" y2="360"/>
+  </g>
+  <text x="1020" y="426" font-size="10" font-weight="700" fill="#0a1628" text-anchor="middle">UTILITY GRID</text>
+  <text x="1020" y="440" font-size="8" fill="#5b708c" text-anchor="middle">POINT OF INTERCONNECTION</text>
+
+  <!-- ============ SITE LOADS (left) ============ -->
+  <rect x="79" y="190" width="34" height="26" rx="3" fill="#e7f2e4" stroke="#6fa96f" stroke-width="1.2"/>
+  <text x="96" y="207" font-size="10" font-weight="700" fill="#3f6b3f" text-anchor="middle">CT</text>
+  <line x1="96" y1="216" x2="96" y2="230" stroke="#1f5fa8" stroke-width="2.5"/>
+  <rect x="52" y="230" width="88" height="40" rx="4" fill="#ffffff" stroke="#93a1b0" stroke-width="1.3"/>
+  <text x="96" y="247" font-size="10" font-weight="700" fill="#0a1628" text-anchor="middle">SITE LOADS</text>
+  <text x="96" y="261" font-size="8.5" fill="#5b708c" text-anchor="middle">480/277 V</text>
+
+  <!-- ============ PCS BRANCH ============ -->
+  <circle cx="360" cy="206" r="3" fill="#1f5fa8"/>
+  <line x1="360" y1="206" x2="360" y2="236" stroke="#1f5fa8" stroke-width="2.5"/>
+  <line x1="285" y1="236" x2="435" y2="236" stroke="#1f5fa8" stroke-width="2.5"/>
+  <line x1="285" y1="236" x2="285" y2="258" stroke="#1f5fa8" stroke-width="2.5"/>
+  <line x1="435" y1="236" x2="435" y2="258" stroke="#1f5fa8" stroke-width="2.5"/>
+  <text x="368" y="228" font-size="10.5" font-weight="700" fill="#1f5fa8">AC</text>
+  <polygon points="215,258 227,246 367,246 355,258" fill="#fbfcfe" stroke="#93a1b0" stroke-width="1"/>
+  <polygon points="355,258 367,246 367,300 355,312" fill="#dfe5ec" stroke="#93a1b0" stroke-width="1"/>
+  <rect x="215" y="258" width="140" height="54" fill="#eef1f5" stroke="#93a1b0" stroke-width="1"/>
+  <text x="285" y="281" font-size="12" font-weight="700" fill="#0a1628" text-anchor="middle">PCS-01</text>
+  <text x="285" y="297" font-size="9" fill="#5b708c" text-anchor="middle">125 kW · 480 V</text>
+  <polygon points="365,258 377,246 517,246 505,258" fill="#fbfcfe" stroke="#93a1b0" stroke-width="1"/>
+  <polygon points="505,258 517,246 517,300 505,312" fill="#dfe5ec" stroke="#93a1b0" stroke-width="1"/>
+  <rect x="365" y="258" width="140" height="54" fill="#eef1f5" stroke="#93a1b0" stroke-width="1"/>
+  <text x="435" y="281" font-size="12" font-weight="700" fill="#0a1628" text-anchor="middle">PCS-02</text>
+  <text x="435" y="297" font-size="9" fill="#5b708c" text-anchor="middle">125 kW · 480 V</text>
+  <line x1="285" y1="312" x2="285" y2="338" stroke="#0e8a6d" stroke-width="2.5"/>
+  <line x1="435" y1="312" x2="435" y2="338" stroke="#0e8a6d" stroke-width="2.5"/>
+  <line x1="285" y1="338" x2="435" y2="338" stroke="#0e8a6d" stroke-width="2.5"/>
+  <circle cx="332" cy="338" r="3" fill="#0e8a6d"/>
+  <line x1="332" y1="338" x2="332" y2="356" stroke="#0e8a6d" stroke-width="2.5"/>
+  <text x="450" y="332" font-size="10.5" font-weight="700" fill="#0e8a6d">DC</text>
+
+  <!-- ============ COMBINER & CONTROL CABINET ============ -->
+  <polygon points="240,356 252,344 437,344 425,356" fill="#fbfcfe" stroke="#93a1b0" stroke-width="1"/>
+  <polygon points="425,356 437,344 437,402 425,414" fill="#dfe5ec" stroke="#93a1b0" stroke-width="1"/>
+  <rect x="240" y="356" width="185" height="58" fill="#eef1f5" stroke="#93a1b0" stroke-width="1"/>
+  <text x="332" y="381" font-size="10.5" font-weight="700" fill="#0a1628" text-anchor="middle">COMBINER &amp; CONTROL</text>
+  <text x="332" y="396" font-size="9" fill="#5b708c" text-anchor="middle">BMS master unit</text>
+
+  <!-- ============ BATTERY BANK ============ -->
+  <line x1="332" y1="414" x2="332" y2="432" stroke="#0e8a6d" stroke-width="2.5"/>
+  <line x1="122" y1="432" x2="512" y2="432" stroke="#0e8a6d" stroke-width="2.5"/>
+  <circle cx="332" cy="432" r="3" fill="#0e8a6d"/>
+  <text x="352" y="426" font-size="10.5" font-weight="700" fill="#0e8a6d">DC</text>
+  <g>
+    <line x1="122" y1="432" x2="122" y2="446" stroke="#0e8a6d" stroke-width="2"/>
+    <polygon points="90,446 100,436 164,436 154,446" fill="#fbfcfe" stroke="#93a1b0" stroke-width="1"/>
+    <polygon points="154,446 164,436 164,484 154,494" fill="#dfe5ec" stroke="#93a1b0" stroke-width="1"/>
+    <rect x="90" y="446" width="64" height="48" fill="#eef1f5" stroke="#93a1b0" stroke-width="1"/>
+    <text x="122" y="467" font-size="11" font-weight="700" fill="#0a1628" text-anchor="middle">BAT 1</text>
+    <text x="122" y="481" font-size="8" fill="#5b708c" text-anchor="middle">300 kWh</text>
+    <line x1="200" y1="432" x2="200" y2="446" stroke="#0e8a6d" stroke-width="2"/>
+    <polygon points="168,446 178,436 242,436 232,446" fill="#fbfcfe" stroke="#93a1b0" stroke-width="1"/>
+    <polygon points="232,446 242,436 242,484 232,494" fill="#dfe5ec" stroke="#93a1b0" stroke-width="1"/>
+    <rect x="168" y="446" width="64" height="48" fill="#eef1f5" stroke="#93a1b0" stroke-width="1"/>
+    <text x="200" y="467" font-size="11" font-weight="700" fill="#0a1628" text-anchor="middle">BAT 2</text>
+    <text x="200" y="481" font-size="8" fill="#5b708c" text-anchor="middle">300 kWh</text>
+    <line x1="278" y1="432" x2="278" y2="446" stroke="#0e8a6d" stroke-width="2"/>
+    <polygon points="246,446 256,436 320,436 310,446" fill="#fbfcfe" stroke="#93a1b0" stroke-width="1"/>
+    <polygon points="310,446 320,436 320,484 310,494" fill="#dfe5ec" stroke="#93a1b0" stroke-width="1"/>
+    <rect x="246" y="446" width="64" height="48" fill="#eef1f5" stroke="#93a1b0" stroke-width="1"/>
+    <text x="278" y="467" font-size="11" font-weight="700" fill="#0a1628" text-anchor="middle">BAT 3</text>
+    <text x="278" y="481" font-size="8" fill="#5b708c" text-anchor="middle">300 kWh</text>
+    <line x1="356" y1="432" x2="356" y2="446" stroke="#0e8a6d" stroke-width="2"/>
+    <polygon points="324,446 334,436 398,436 388,446" fill="#fbfcfe" stroke="#93a1b0" stroke-width="1"/>
+    <polygon points="388,446 398,436 398,484 388,494" fill="#dfe5ec" stroke="#93a1b0" stroke-width="1"/>
+    <rect x="324" y="446" width="64" height="48" fill="#eef1f5" stroke="#93a1b0" stroke-width="1"/>
+    <text x="356" y="467" font-size="11" font-weight="700" fill="#0a1628" text-anchor="middle">BAT 4</text>
+    <text x="356" y="481" font-size="8" fill="#5b708c" text-anchor="middle">300 kWh</text>
+    <line x1="434" y1="432" x2="434" y2="446" stroke="#0e8a6d" stroke-width="2"/>
+    <polygon points="402,446 412,436 476,436 466,446" fill="#fbfcfe" stroke="#93a1b0" stroke-width="1"/>
+    <polygon points="466,446 476,436 476,484 466,494" fill="#dfe5ec" stroke="#93a1b0" stroke-width="1"/>
+    <rect x="402" y="446" width="64" height="48" fill="#eef1f5" stroke="#93a1b0" stroke-width="1"/>
+    <text x="434" y="467" font-size="11" font-weight="700" fill="#0a1628" text-anchor="middle">BAT 5</text>
+    <text x="434" y="481" font-size="8" fill="#5b708c" text-anchor="middle">300 kWh</text>
+    <line x1="512" y1="432" x2="512" y2="446" stroke="#0e8a6d" stroke-width="2"/>
+    <polygon points="480,446 490,436 554,436 544,446" fill="#fbfcfe" stroke="#93a1b0" stroke-width="1"/>
+    <polygon points="544,446 554,436 554,484 544,494" fill="#dfe5ec" stroke="#93a1b0" stroke-width="1"/>
+    <rect x="480" y="446" width="64" height="48" fill="#eef1f5" stroke="#93a1b0" stroke-width="1"/>
+    <text x="512" y="467" font-size="11" font-weight="700" fill="#0a1628" text-anchor="middle">BAT 6</text>
+    <text x="512" y="481" font-size="8" fill="#5b708c" text-anchor="middle">300 kWh</text>
+  </g>
+
+  <!-- ============ PV BRANCH ============ -->
+  <rect x="603" y="190" width="34" height="26" rx="3" fill="#e7f2e4" stroke="#6fa96f" stroke-width="1.2"/>
+  <text x="620" y="207" font-size="10" font-weight="700" fill="#3f6b3f" text-anchor="middle">CT</text>
+  <line x1="620" y1="216" x2="620" y2="246" stroke="#1f5fa8" stroke-width="2.5"/>
+  <line x1="620" y1="246" x2="890" y2="246" stroke="#1f5fa8" stroke-width="2.5"/>
+  <line x1="620" y1="246" x2="620" y2="268" stroke="#1f5fa8" stroke-width="2.5"/>
+  <line x1="710" y1="246" x2="710" y2="268" stroke="#1f5fa8" stroke-width="2.5"/>
+  <line x1="800" y1="246" x2="800" y2="268" stroke="#1f5fa8" stroke-width="2.5"/>
+  <line x1="890" y1="246" x2="890" y2="268" stroke="#1f5fa8" stroke-width="2.5"/>
+  <text x="628" y="238" font-size="10.5" font-weight="700" fill="#1f5fa8">AC</text>
+  <g>
+    <rect x="578" y="268" width="84" height="48" rx="4" fill="#ffffff" stroke="#93a1b0" stroke-width="1.3"/>
+    <text x="620" y="288" font-size="8" fill="#5b708c" text-anchor="middle" letter-spacing="0.06em">PV INVERTER</text>
+    <text x="620" y="305" font-size="12.5" font-weight="700" fill="#0a1628" text-anchor="middle">01</text>
+    <rect x="668" y="268" width="84" height="48" rx="4" fill="#ffffff" stroke="#93a1b0" stroke-width="1.3"/>
+    <text x="710" y="288" font-size="8" fill="#5b708c" text-anchor="middle" letter-spacing="0.06em">PV INVERTER</text>
+    <text x="710" y="305" font-size="12.5" font-weight="700" fill="#0a1628" text-anchor="middle">02</text>
+    <rect x="758" y="268" width="84" height="48" rx="4" fill="#ffffff" stroke="#93a1b0" stroke-width="1.3"/>
+    <text x="800" y="298" font-size="14" font-weight="700" fill="#93a1b0" text-anchor="middle">&#183;&#183;&#183;</text>
+    <rect x="848" y="268" width="84" height="48" rx="4" fill="#ffffff" stroke="#93a1b0" stroke-width="1.3"/>
+    <text x="890" y="288" font-size="8" fill="#5b708c" text-anchor="middle" letter-spacing="0.06em">PV INVERTER</text>
+    <text x="890" y="305" font-size="12.5" font-weight="700" fill="#0a1628" text-anchor="middle">08</text>
+  </g>
+  <text x="612" y="340" font-size="10.5" font-weight="700" fill="#0e8a6d" text-anchor="end">DC</text>
+  <g stroke="#5b708c" stroke-width="1.3">
+    <line x1="620" y1="316" x2="620" y2="362" stroke="#0e8a6d" stroke-width="2"/>
+    <polygon points="560,370 680,356 680,368 560,382" fill="#dbe4ee"/>
+    <line x1="560" y1="376" x2="680" y2="362" stroke-width="1"/>
+    <line x1="580" y1="380" x2="580" y2="392" stroke-width="1.3"/>
+    <line x1="660" y1="370" x2="660" y2="382" stroke-width="1.3"/>
+    <line x1="710" y1="316" x2="710" y2="362" stroke="#0e8a6d" stroke-width="2"/>
+    <polygon points="650,370 770,356 770,368 650,382" fill="#dbe4ee"/>
+    <line x1="650" y1="376" x2="770" y2="362" stroke-width="1"/>
+    <line x1="670" y1="380" x2="670" y2="392" stroke-width="1.3"/>
+    <line x1="750" y1="370" x2="750" y2="382" stroke-width="1.3"/>
+    <line x1="800" y1="316" x2="800" y2="362" stroke="#0e8a6d" stroke-width="2"/>
+    <polygon points="740,370 860,356 860,368 740,382" fill="#dbe4ee"/>
+    <line x1="740" y1="376" x2="860" y2="362" stroke-width="1"/>
+    <line x1="760" y1="380" x2="760" y2="392" stroke-width="1.3"/>
+    <line x1="840" y1="370" x2="840" y2="382" stroke-width="1.3"/>
+    <line x1="890" y1="316" x2="890" y2="362" stroke="#0e8a6d" stroke-width="2"/>
+    <polygon points="830,370 950,356 950,368 830,382" fill="#dbe4ee"/>
+    <line x1="830" y1="376" x2="950" y2="362" stroke-width="1"/>
+    <line x1="850" y1="380" x2="850" y2="392" stroke-width="1.3"/>
+    <line x1="930" y1="370" x2="930" y2="382" stroke-width="1.3"/>
+  </g>
+  <g font-size="9" fill="#5b708c" text-anchor="middle">
+    <text x="620" y="406">PV-01</text>
+    <text x="710" y="406">PV-02</text>
+    <text x="800" y="406">PV-07</text>
+    <text x="890" y="406">PV-08</text>
+  </g>
+
+  <!-- ============ PV CONTROLLER ============ -->
+  <rect x="770" y="432" width="100" height="40" rx="4" fill="#fdeade" stroke="#e8622c" stroke-width="1.4"/>
+  <text x="820" y="449" font-size="9.5" font-weight="700" fill="#b84a1c" text-anchor="middle">PV</text>
+  <text x="820" y="463" font-size="9.5" font-weight="700" fill="#b84a1c" text-anchor="middle">CONTROLLER</text>
+
+  <!-- ============ EMS CONTROLLER ============ -->
+  <rect x="455" y="356" width="100" height="48" rx="4" fill="#fdeade" stroke="#e8622c" stroke-width="1.4"/>
+  <text x="505" y="377" font-size="13" font-weight="700" fill="#b84a1c" text-anchor="middle">EMS</text>
+  <text x="505" y="393" font-size="8" fill="#b84a1c" text-anchor="middle" letter-spacing="0.08em">CONTROLLER</text>
+
+  <!-- ============ COMMS (dashed) ============ -->
+  <g stroke="#98a4b3" stroke-width="1.3" stroke-dasharray="4 3" fill="none">
+    <path d="M500 356 V150 H948"/>
+    <path d="M470 356 V312"/>
+    <path d="M455 390 H437"/>
+    <path d="M505 404 V428 H745 V452 H770"/>
+  </g>
+  <text x="700" y="144" font-size="8" fill="#8b98a8" text-anchor="middle" letter-spacing="0.08em">VPN · REMOTE O&amp;M</text>
+  <text x="478" y="336" font-size="8" fill="#8b98a8">Modbus TCP</text>
+
+  <!-- ============ FOOTER ============ -->
+  <text x="36" y="514" font-size="9.5" fill="#7a8aa0" letter-spacing="0.06em">UL 9540 · IEEE 1547 · NEC ARTICLE 706 — COMPLIANT DESIGN</text>
+</svg>
