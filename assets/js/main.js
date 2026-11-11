@@ -107,12 +107,31 @@
   }
 
   /* ---------- Inquiry form ---------- */
+  // FormSubmit.co AJAX endpoint — zero account required.
+  // NOTE: the very first submission triggers an activation email to
+  // alex@jsenertech.com; click the link once and the form is live forever.
+  var FORM_ENDPOINT = "https://formsubmit.co/ajax/alex@jsenertech.com";
+
   var form = document.getElementById("inquiryForm");
   var status = document.getElementById("formStatus");
+
+  function setStatus(message, tone, html) {
+    if (!status) return;
+    status.style.display = "block";
+    status.style.color = tone === "error" ? "#e8622c" : "#1a7f4b";
+    if (html) {
+      status.innerHTML = message;
+    } else {
+      status.textContent = message;
+    }
+  }
 
   if (form) {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
+
+      var btn = form.querySelector('button[type="submit"]');
+      if (btn && btn.disabled) return; // guard against double submits
 
       var required = form.querySelectorAll("[required]");
       var valid = true;
@@ -128,37 +147,68 @@
       });
 
       if (!valid) {
-        if (status) {
-          status.style.display = "block";
-          status.style.color = "#e8622c";
-          status.textContent =
-            "Please complete the required fields with a valid work email.";
-        }
+        setStatus(
+          "Please complete the required fields with a valid work email.",
+          "error"
+        );
         return;
       }
 
-      // Demo mode: no backend attached yet.
-      // Replace this block with a fetch() to your form endpoint
-      // (Formspree / Basin / Netlify Forms / your own API).
-      var btn = form.querySelector('button[type="submit"]');
+      var payload = {};
+      new FormData(form).forEach(function (value, key) {
+        if (typeof value === "string") payload[key] = value;
+      });
+      payload._captcha = "false";
+      payload._replyto = (form.querySelector('[name="email"]') || {}).value || "";
+
       if (btn) {
         btn.disabled = true;
         btn.style.opacity = "0.7";
+        btn.dataset.label = btn.textContent;
+        btn.textContent = "Sending…";
       }
+      setStatus("Sending your inquiry…", "ok");
 
-      setTimeout(function () {
-        if (status) {
-          status.style.display = "block";
-          status.style.color = "#1a7f4b";
-          status.textContent =
-            "Thank you — your inquiry has been received. Our engineering team will reply within one business day.";
-        }
-        form.reset();
-        if (btn) {
-          btn.disabled = false;
-          btn.style.opacity = "";
-        }
-      }, 600);
+      fetch(FORM_ENDPOINT, {
+        method: "POST",
+        body: JSON.stringify(payload),
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+      })
+        .then(function (res) {
+          return res.json().then(function (data) {
+            return { ok: res.ok, data: data };
+          });
+        })
+        .then(function (result) {
+          if (!result.ok || result.data.success === "false") {
+            var msg = "Submission failed.";
+            if (result.data && result.data.message) msg = result.data.message;
+            throw new Error(msg);
+          }
+          setStatus(
+            "Thank you — your inquiry has been received. Our engineering team will reply within one business day.",
+            "ok"
+          );
+          form.reset();
+        })
+        .catch(function () {
+          if (status) {
+            status.style.display = "block";
+            status.style.color = "#e8622c";
+            status.innerHTML =
+              'Sorry, the form could not be sent right now. Please email us directly at <a href="mailto:alex@jsenertech.com" style="color:inherit;text-decoration:underline">alex@jsenertech.com</a> — we reply within one business day.';
+          }
+        })
+        .finally(function () {
+          if (btn) {
+            btn.disabled = false;
+            btn.style.opacity = "";
+            if (btn.dataset.label) btn.textContent = btn.dataset.label;
+          }
+        });
     });
   }
 
